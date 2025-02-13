@@ -1,12 +1,9 @@
 /* General body styling */
 body {
-    
-    /*align-items: center; 
-    justify-content: center; 
-    
-    margin: 0;
-    text-align: center;  */
-    height: 100vh;
     margin: 10;
     font-family: Arial, sans-serif;
+}
+
+footer {
+    padding-top: 20px;
 }
