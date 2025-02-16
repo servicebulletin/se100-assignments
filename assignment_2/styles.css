@@ -20,6 +20,10 @@ body {
     padding: 20px;
 }
 
+table {
+    width: 100%;
+}
+
 /* Add in your own customisations */
 table, th, td {
     border: 1px solid #ddd;
