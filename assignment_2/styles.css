@@ -24,3 +24,7 @@ table, th, td {
     border: 1px solid #ddd;
     border-collapse: collapse;
 }
+
+th, td {
+    padding: 10px;
+}
