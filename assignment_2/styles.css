@@ -15,10 +15,6 @@ header, footer, section {
     padding: 10px 0;
 }
 
-ul {
-    padding-left: 20px;
-}
-
 /* Body styling */
 body {
     font-family: Arial, sans-serif;
@@ -32,7 +28,6 @@ table {
     width: 100%;
 }
 
-/* Add in your own customisations */
 table, th, td {
     border: 1px solid #ddd;
     border-collapse: collapse;
@@ -41,6 +36,11 @@ table, th, td {
 
 th, td {
     padding: 10px;
+}
+
+tr:hover {
+    background-color: #c7e8fb;
+    font-weight: bold;
 }
 
 /* Hyperlink styling */
@@ -53,4 +53,9 @@ a {
 a:hover {
     color: #005a8d; 
     text-decoration: underline; 
+}
+
+/* Indent lists for readability */
+ul {
+    padding-left: 20px;
 }
