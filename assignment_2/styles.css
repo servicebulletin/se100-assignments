@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-header {
+header, footer {
     background-color: #93d0f4;
     text-align: center;
     color: white;
