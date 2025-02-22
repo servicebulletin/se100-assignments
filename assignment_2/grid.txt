@@ -28,3 +28,4 @@
 26) grid-template-rows: 20px 10px 10px 10px 1fr;
 27) grid-template: 60% 40% / 200px;
 28) grid-template: 1fr 50px / 20% 80%;
+
