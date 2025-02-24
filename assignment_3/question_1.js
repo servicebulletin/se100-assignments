@@ -6,6 +6,6 @@ function average(array) {
     return sum / array.length
 }
 
-const msftData = [190.15, 194.21, 191.07, 190.44, 200.15]
+let msftData = [190.15, 194.21, 191.07, 190.44, 200.15]
 
 console.log(average(msftData))
