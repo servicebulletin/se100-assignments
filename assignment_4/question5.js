@@ -14,3 +14,18 @@ const disneyData = [
 ];
 
 // Write your code below
+function avgClosingPrice(arr) {
+	let sum = 0
+	for (let i = 0; i < arr.length; i++) {
+		sum += parseFloat(arr[i]["close"])
+	}
+	return sum / arr.length
+}
+
+// Improved toFixed function which rounds .xx5 correctly
+// https://stackoverflow.com/questions/10015027/javascript-tofixed-not-rounding/23204425#23204425
+function toFixedImproved(num, precision) {
+    return (+(Math.round(+(num + 'e' + precision)) + 'e' + -precision)).toFixed(precision);
+}
+
+console.log("Average closing price of Disney is %f", toFixedImproved(avgClosingPrice(disneyData), 2))
