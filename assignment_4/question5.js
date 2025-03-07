@@ -16,8 +16,8 @@ const disneyData = [
 // Write your code below
 function avgClosingPrice(arr) {
 	let sum = 0
-	for (let i = 0; i < arr.length; i++) {
-		sum += parseFloat(arr[i]["close"])
+	for (let i of arr) {
+		sum += parseFloat(i["close"])
 	}
 	return sum / arr.length
 }

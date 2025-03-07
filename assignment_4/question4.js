@@ -6,8 +6,8 @@ const msftData = [
 // Write your code below
 function avgClosingPrice(arr) {
 	let sum = 0;
-	for (let i = 0; i < arr.length; i++) {
-		sum += arr[i][3];
+	for (let i of arr) {
+		sum += i[3];
 	}
 	return sum / arr.length;
 }
