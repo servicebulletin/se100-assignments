@@ -3,6 +3,7 @@ p.then(value => console.log(value));
 
 Question 1:
 // Your code here
+p.then((message) => console.log(message))
 
 Question 2:
 // Your code here
