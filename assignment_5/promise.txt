@@ -11,10 +11,10 @@ Question 3:
 p.then(result => console.log(result))
 
 Question 4:
-// Your code here
+p.then(result => console.log(result['name']))
 
 Question 5:
-// Your code here
+p.catch(error => console.log(error))
 
 Question 6:
 // Your code here
