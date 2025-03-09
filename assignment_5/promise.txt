@@ -17,7 +17,13 @@ Question 5:
 p.catch(error => console.log(error))
 
 Question 6:
-// Your code here
+p.then(
+    value => console.log("Promise resolved, value: %i", value)
+).catch(
+    error => console.log("Promise rejected")
+).finally(
+    () => console.log("Promise settled")
+)
 
 Question 7:
 // Your code here
