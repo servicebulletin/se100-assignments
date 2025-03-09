@@ -48,7 +48,9 @@ p.then(
 )
 
 Question 9:
-// Your code here
+Promise.all(promises).then((values) => {
+    console.log(values)
+})
 
 Question 10:
 // Your code here
