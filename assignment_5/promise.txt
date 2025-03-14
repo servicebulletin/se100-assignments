@@ -35,17 +35,7 @@ p.then(result => {
 })
 
 Question 8:
-// Assume the promise is meant to modify the value of the variable.
-// In this case, we set the variable to a default value of 0. 
-let variable = 0
-
-p.then(
-    result => {variable = result}s
-).catch(
-    error => {}
-).finally(
-    result => console.log(variable)
-)
+p.catch(error => console.log(0))
 
 Question 9:
 Promise.all(promises).then((values) => {
@@ -60,4 +50,6 @@ const promises = [
 ]
 
 Bonus Question:
-// Your code here
+const p = Promise.resolve('World')
+const concatString = (str) => Promise.resolve('Hello ' + str)
+p.then(str => console.log(concatString(str)))
