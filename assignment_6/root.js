@@ -1,24 +1,39 @@
 // root.js
 
-function PublicBlogPost() {
-
+// Review the <i> bit
+function PublicBlogPost(props) {
+  return (
+    <div className="blog-post">
+      <h2>{props.title}</h2>
+      <i>By {props.author} on {props.date}</i>
+      <p>{props.content}</p>
+    </div>
+  )
 }
 
 function PrivateBlogPost() {
 
 }
 
-function BlogList() {
-
+function BlogList(blogPosts) {
+  return <div> {
+    blogPosts.map(...)
+  } 
+  </div>
 }
 
-function Header() {
-
+function Header(props) {
+  return (
+    <header>
+      <h1>{props.title}</h1>
+      <p>{props.tagline}</p>
+    </header>
+  )
 }
 
 function Footer() {
 
-};
+} 
 
 function App() {
   const blogPosts = [
