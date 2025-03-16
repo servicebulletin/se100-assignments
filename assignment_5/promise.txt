@@ -1,0 +1,55 @@
+Example Question:
+p.then(value => console.log(value));
+
+Question 1:
+p.then((message) => console.log(message))
+
+Question 2:
+p.catch(error => console.log(error))
+
+Question 3:
+p.then(result => console.log(result))
+
+Question 4:
+p.then(result => console.log(result['name']))
+
+Question 5:
+p.catch(error => console.log(error))
+
+Question 6:
+p.then(
+    value => console.log("Promise resolved, value: %i", value)
+).catch(
+    error => console.log("Promise rejected")
+).finally(
+    () => console.log("Promise settled")
+)
+
+Question 7:
+p.then(result => {
+    result *= 2
+    console.log(
+        "The answer to life, the universe, and everything is: %i", 
+        result
+    )
+})
+
+Question 8:
+p.catch(error => console.log(0))
+
+Question 9:
+Promise.all(promises).then((values) => {
+    console.log(values)
+})
+
+Question 10:
+const promises = [
+    new Promise(resolve => setTimeout(() => resolve('a'), 100)), 
+    new Promise(resolve => setTimeout(() => resolve('b'), 50)),
+    new Promise(resolve => setTimeout(() => resolve('c'), 150))
+]
+
+Bonus Question:
+const p = Promise.resolve('World')
+const concatString = (str) => Promise.resolve('Hello ' + str)
+p.then(str => console.log(concatString(str)))
