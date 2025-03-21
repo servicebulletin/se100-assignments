@@ -1,25 +1,46 @@
 // root.js
-
-// Review the <i> bit
 function PublicBlogPost(props) {
   return (
     <div className="blog-post">
       <h2>{props.title}</h2>
-      <i>By {props.author} on {props.date}</i>
+      <div className="meta">By {props.author} on {props.date}</div>
       <p>{props.content}</p>
     </div>
   )
 }
 
-function PrivateBlogPost() {
-
+function PrivateBlogPost(props) {
+  return (
+    <div className="private-posts">
+      <h2>{props.title}</h2>
+      <div className="meta">By {props.author} on {props.date}</div>
+      <p>The content of this post is private.</p>
+    </div>
+  )
 }
 
-function BlogList(blogPosts) {
-  return <div> {
-    blogPosts.map(...)
-  } 
-  </div>
+function BlogList({blogPosts}) {
+
+  return <div className="blog-list"> {
+    blogPosts.map((post, key) => {
+      if (post.isPrivate) {
+        return (<PrivateBlogPost
+          key={key}
+          title={post.title}
+          author={post.author}
+          date={post.date}
+        />)
+      } else {
+        return (<PublicBlogPost
+          key={key}
+          title={post.title}
+          author={post.author}
+          date={post.date}
+          content={post.content}
+        />)
+      }
+    })
+  } </div>
 }
 
 function Header(props) {
@@ -31,8 +52,12 @@ function Header(props) {
   )
 }
 
-function Footer() {
-
+function Footer(props) {
+  return (
+    <footer>
+      &copy; {props.year} My Blog. All rights reserved.
+    </footer>
+  )
 } 
 
 function App() {
@@ -72,9 +97,16 @@ function App() {
       content: 'Dreaming of traveling the world but worried about the cost? This post covers my top tips for seeing new places without breaking the bank.',
       isPrivate: false
     }
-  ];
+  ]
 
-};
+  return (
+    <div>
+      <Header title="My Blog" tagline="Exploring the world one post at a time" />
+      <BlogList blogPosts={blogPosts} />
+      <Footer year={2024} />
+    </div>
+  )
+}
 
 const domContainer = document.getElementById('root');
 const root = ReactDOM.createRoot(domContainer);
